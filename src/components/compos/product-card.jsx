@@ -23,16 +23,16 @@ export default function ProductCard({ product }) {
           <AspectRatio>
             <img src={product.image} alt="test" />
           </AspectRatio>
-          <span>
-            {product.price}
-          </span>
+          <div className="flex items-center justify-between">
+            <span className="font-medium">{`${product.price} €`}</span>
+            <span className="font-medium">{`${product.quantity} Restants`}</span>
+          </div>
         </div>
       </CardContent>
       <CardFooter className="flex justify-evenly">
         <Link to={`/product/${product.id}`}>
-          <Button variant="outline">See Product</Button>
+          <Button>See Product</Button>
         </Link>
-        <Button>Deploy</Button>
       </CardFooter>
     </Card>
   )
