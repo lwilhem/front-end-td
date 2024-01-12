@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <main className="w-full max-w-full min-h-screen">
       <header className="mb-8 flex items-center justify-start px-4 w-full max-w-full h-12 bg-red-500">
-        <span>IIM Shop</span>
+        <span className="font-black text-4xl">Products</span>
       </header>
       <section className="flex items-center justify-center flex-wrap">
         {products && products.map(product => (

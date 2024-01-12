@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import {
   Card,
   CardContent,
@@ -7,7 +9,6 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 
 export default function ProductCard({ product }) {
@@ -23,12 +24,14 @@ export default function ProductCard({ product }) {
             <img src={product.image} alt="test" />
           </AspectRatio>
           <span>
-
+            {product.price}
           </span>
         </div>
       </CardContent>
       <CardFooter className="flex justify-evenly">
-        <Button variant="outline">Comment</Button>
+        <Link to={`/product/${product.id}`}>
+          <Button variant="outline">See Product</Button>
+        </Link>
         <Button>Deploy</Button>
       </CardFooter>
     </Card>
